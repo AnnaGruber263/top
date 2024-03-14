@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Spots der Webmapper:innen</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+</head>
+
+<body>
+    <header>
+        <!-- Bild: https://pixabay.com/de/photos/see-dorf-kirche-hallst%C3%A4tter-8357182/ -->
+        <img src="images/hallstatt.JPG" alt="Blick von oben auf Hallstatt">
+        <!-- Bild: https://pixabay.com/de/illustrations/ai-generiert-vogel-kiwi-tier-8510812/ -->
+        <a href="https://github.com/webmapping/nz"></a> <img src="images/user.jpg" alt="AI generierter Kiwi">
+    </header>
+    <main>
+        <article>
+            <h1>Top Spots</h1>
+            <h2>Salzkammergut</h2>
+            <p>Das <b>Salzkammergut</b> ist ein landschaftlich und historisch geprägter Kulturraum in Österreich, am
+                Nordrand der Alpen. Er erstreckt sich über das Grenzgebiet der heutigen Bundesländer Oberösterreich,
+                Salzburg und Steiermark.</p>
+            <p>Im historischen Sinn trifft der Name nur auf den oberösterreichischen Teil zu. Der habsburgische
+                Privatbesitz in Oberösterreich um Bad Ischl und Hallstatt, insbesondere der Besitz, der vom Salzoberamt
+                Gmunden verwaltet wurde, hieß <em>„Salzkammergut“</em> und umfasste die Region des Inneren
+                Salzkammergutes. Das
+                Fürsterzbistum Salzburg hatte mit dem historischen Salzkammergut nichts zu tun, da es nicht habsburgisch
+                war.</p>
+            <p><a href="https://de.wikipedia.org/wiki/Salzkammergut">Quelle Wikipedia</a></p>
+
+            <h3>Die Region Salzkammergut</h3>
+            <figure>
+                <img src="images/picture.JPG" alt="Blick vom Schafberg">
+                <figcaption>Aussicht vom Schafberg auf den Wolfgangsee und umliegende Berge (Quelle: Eigene Aufnahme)
+                </figcaption>
+            </figure>
+
+            <h3>Übersichtskarte</h3>
+            <div id="map" style="width:90%;height: 600px"></div>
+
+            <h3>Links</h3>
+
+            <ul>
+                <li><a href="https://www.salzkammergut.at/">Offizielle Seite der Region Salzkammergut</a></li>
+                <li><a href="https://www.austria.info/de/reiseziele/regionen/salzkammergut">Tourismus Portal Österreich
+                        - Das Salzkammergut</a></li>
+                <li><a href="https://www.oberoesterreich.at/regionen/salzkammergut.html">OBERÖSTERREICH - Urlaub im
+                        Salzkammergut</a></li>
+            </ul>
+
+        </article>
+        <footer>
+            <nav>
+                <p><a href="https://kreiselinho.github.io/top">vorhergehende Etappe</a></p>
+                <p><a href="https://ernstanton.github.io/top">nächste Etappe</a></p>
+            </nav>
+
+        </footer>
+    </main>
+    <script>
+        var map = L.map('map').setView([47.75, 13.5], 13);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        var marker = L.marker([47.75, 13.5]).addTo(map);
+        marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+    </script>
+</body>
+
+</html>
