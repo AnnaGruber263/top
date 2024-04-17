@@ -280,7 +280,7 @@ L.geoJSON(jsondata, {}).bindPopup(function (layer) {
     <ul>
     <li>Breite: ${layer.feature.geometry.coordinates[1].toFixed(5)} </li>
     <li>Länge: ${layer.feature.geometry.coordinates[0].toFixed(5)} </li>
-    <li><a href="https://${layer.feature.properties.user}.github.io/top">Etappenseite>/
+    <li><a href="https://${layer.feature.properties.user}.github.io/top">Etappenseite</
     a></li>
     <li><a href="${layer.feature.properties.wikipedia}">Wikipediaseite</li>
 
