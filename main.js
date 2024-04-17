@@ -16,7 +16,7 @@ L.control.scale({
     imperial: false
 }).addTo(map);
 
-let jsonData = {
+let jsondata = {
     "type": "FeatureCollection",
     "features": [
         {
