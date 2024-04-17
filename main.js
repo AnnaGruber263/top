@@ -262,6 +262,16 @@ let jsonData = {
     ]
 }
 
+let jsonPunkt = {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [lng, lat]
+    },
+    "properties": {
+        "name": "Salzkammergut"
+    }
+};
 
 L.geoJSON(jsondata, {}).bindPopup(function (layer) {
     console.log(layer.feature.properties)
