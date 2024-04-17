@@ -1,5 +1,5 @@
-let lat = 47.776389
-let lng = 13.433611
+let lat = 13.433611
+let lng = 47.776389
 let zoom = 13
 
 let map = L.map('map', {
